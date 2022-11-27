@@ -1,0 +1,9 @@
+---
+const { title, url } = Astro.props;
+---
+<li class="blog-posts-list"><a href={url}>{title}</a></li>
+<style>
+  .blog-posts-list {
+    list-style-type: none;
+  }
+</style>
