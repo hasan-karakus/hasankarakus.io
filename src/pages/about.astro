@@ -1,15 +1,16 @@
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Hasan Karakus</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-    <h1>About me</h1>
-    <a href="/">Home</a>
-		<a href="/blog/">Blog</a>
-	</body>
-</html>
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "About Me";
+
+const identity = {
+  firstName: "Hasan Karakus",
+  country: "UK",
+  occupation: "Product Owner",
+  hobbies: ["photography", "writing", "gym", "sports"],
+};
+---
+<BaseLayout pageTitle={pageTitle}>
+  <h1>{pageTitle}</h1>
+  <p>My name is Hasan</p>
+</BaseLayout>
